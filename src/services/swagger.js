@@ -60,7 +60,7 @@ let options = {
   ],  
 };
 
-console.log
+console.log("NODE_ENV:", process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'dev') {
   options.definition.servers.unshift({url: "http://localhost:3003"});

@@ -36,7 +36,7 @@
     "mysql": "^2.18.1",
     "mysql-await": "^2.2.2",
     "node-cron": "^3.0.3",
-    "nodemailer": "^6.9.8",
+    "nodemailer": "^8.0.1",
     "path": "^0.12.7",
     "sharp": "^0.32.6",
     "swagger-jsdoc": "^6.2.8",

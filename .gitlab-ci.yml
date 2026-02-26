@@ -1,0 +1,4 @@
+test_connection:
+  stage: test
+  script:
+    - "ssh gitlab@spsvjee04 'cut -d: -f1 /etc/passwd'"

@@ -1,13 +1,6 @@
 USE SolucoesDigitais;
 
-CREATE TABLE IF NOT EXISTS SolucoesDigitais.FaixaCEP (
-  IdFaixaCep INT AUTO_INCREMENT PRIMARY KEY,
-  IdLocal INT NOT NULL,
-  CEPde BIGINT NOT NULL,
-  CEPate BIGINT NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS SolucoesDigitais.Produto (
+CREATE TABLE Produto (
   IdProduto INT PRIMARY KEY,
   DescrTituloProduto VARCHAR(255),
   DescrProduto TEXT,
@@ -19,7 +12,7 @@ CREATE TABLE IF NOT EXISTS SolucoesDigitais.Produto (
   Certificado BOOLEAN DEFAULT 0
 );
 
-CREATE TABLE IF NOT EXISTS SolucoesDigitais.Coletivo (
+CREATE TABLE Coletivo (
   IdAtendimento INT PRIMARY KEY,
   IdProduto INT NOT NULL,
   IdLocalAtendimento INT,
@@ -46,7 +39,7 @@ CREATE TABLE IF NOT EXISTS SolucoesDigitais.Coletivo (
   INDEX (IdProduto)
 );
 
-CREATE TABLE IF NOT EXISTS SolucoesDigitais.Kit (
+CREATE TABLE Kit (
   IdKit INT PRIMARY KEY,
   NomeKit VARCHAR(255),
   DescrKit TEXT,
@@ -57,7 +50,7 @@ CREATE TABLE IF NOT EXISTS SolucoesDigitais.Kit (
   Certificado BOOLEAN DEFAULT 0
 );
 
-CREATE TABLE IF NOT EXISTS SolucoesDigitais.ExecucaoKit (
+CREATE TABLE ExecucaoKit (
   IdExecucaoKit INT PRIMARY KEY,
   IdKit INT NOT NULL,
   NomeKit VARCHAR(255),
@@ -84,7 +77,7 @@ CREATE TABLE IF NOT EXISTS SolucoesDigitais.ExecucaoKit (
   INDEX (IdKit)
 );
 
-CREATE TABLE IF NOT EXISTS SolucoesDigitais.Consultoria (
+CREATE TABLE Consultoria (
   IdProduto INT PRIMARY KEY,
   DescrTituloProduto VARCHAR(255),
   DescrProduto TEXT,
